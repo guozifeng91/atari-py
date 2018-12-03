@@ -19,6 +19,10 @@ this repo to your `PYTHONPATH`:
 
 ```export PYTHONPATH=/path/to/atari-py:$PYTHONPATH```
 
+### Install on windows
+
+see [instruction](https://github.com/guozifeng91/atari-py/blob/master/Install%20on%20windows), it needs the repostory from [openai](https://github.com/openai/atari-py) and a modified older version by [rybskej](https://github.com/rybskej/atari-py)
+
 ### Common issues
 
 - Make sure you have `cmake` installed. On OSX, you probably want
