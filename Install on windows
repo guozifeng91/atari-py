@@ -1,0 +1,32 @@
+atari-py library for windows,
+
+installation:
+
+PART1. PREPARE COMPILE PROGRAMS
+
+1. install msys2 (a package manager, do not change the target dir) from http://www.msys2.org/
+
+2. run pacman -Syu and pacman -Su from msys2 terminal to update packages (one by one, after the first one, quit the ternimal)
+
+3. run pacman -S base-devel mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake to install gcc, cmake
+
+4. run pacman -S make to install make
+
+5. add C:\msys64\mingw64\bin and C:\msys64\usr\bin into system Path, so that make can be accessed by windows cmd
+
+PART2. CLONE PYTHON PACKAGE FROM GITHUB AND COMPILE
+
+6.1 run git clone https://github.com/rybskej/atari-py to download the python package (this is the older version of atari-py, but we need it!!!)
+6.2 run git clone https://github.com/openai/atari-py to download the python package (this is the newer version of atari-py)
+
+IMPORTANT
+7. copy all the make files in "atari-py\atari_py\ale_interface" from the old version to new version (replace compile conf. from linux to windows)
+
+8. run make to compile (admin mode if necessary)
+
+PART3. MODIFY SOURCE CODE AND INSTALL PACKAGE
+
+IMPORTANT
+9. open ale_python_interface.py and package_data.txt of the new version, change ale_interface/build/*.so to ale_interface/build/*.dll, and ale_interface/build/libale_c.so to ale_interface/build/libale_c.dll
+
+10. run setup.py install (admin mode if necessary)
